@@ -1,0 +1,128 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/timetable.css">
+<link rel="stylesheet" type="text/css" href="Semantic-UI-master\dist\semantic.css">
+<link rel="stylesheet" type="text/css" href="Semantic-UI-master\dist\components\dropdown.css">
+<link rel="stylesheet" type="text/css" href="Semantic-UI-master\dist\components\search.css">
+<script src="js/jquery.js"></script>
+<script src="Semantic-UI-master/dist/semantic.js"></script>
+<script src="Semantic-UI-master/dist/components/dropdown.js"></script>
+<script src="Semantic-UI-master/dist/components/search.js"></script>
+<script src="js/timeTable.js"></script>
+</head>
+<body>
+    <div id="pagemain">
+        <div id="main-content">
+			<div id="message">
+			</div>
+			<h1>Time Table Generator</h1>
+			<div id="basicInfoEdit">
+				<h3>Class Information</h3>
+				<div class="ui small icon input">
+					<input id="className" type="text" placeholder="Enter the number of class name" style="width: 235px;">
+				</div>
+				<div class="ui small icon input">
+					<input id="noOfDays" type="number" placeholder="Enter the number of days" style="width: 235px;">
+				</div>
+				<div class="ui small icon input">
+					<input id="noOfPeriods" type="number" placeholder="Enter the number of periods" style="width: 235px;">
+				</div>
+				<button id="addBasicInfo" class="ui primary button">Add</button>
+				<button id="clearBasicInfo" class="ui button">Clear All</button>
+			</div>
+			<div id="finishOrEditBasicInfo" style="margin-top: 14px;">
+			   <button id="finishBasicInfo" class="ui primary button">Finish</button>
+			   <button id="editBasicInfo" class="ui primary button">Edit Class Information</button>
+			</div>
+			<div id="teacherInfoEdit" style="margin-top: 24px;">
+				<h3>Teacher Information</h3>
+				<div class="ui small icon input">
+					<input id="teacherName" type="text" placeholder="Enter the teacher name..." style="width: 235px;">
+				</div>
+				<div class="ui small icon input">
+					<input id="subjectName" type="text" placeholder="Enter the subject name..." style="width: 235px;">
+				</div>
+				<button id="addTeacherInfo" class="ui primary button">Add</button>
+				<button id="clearTeacherInfo" class="ui button">Clear All</button>
+			</div>
+			<div id="finishOrEditTeacherInfo" style="margin-top: 14px;">
+			   <button id="finishTeachInfo" class="ui primary button">Finish</button>
+			   <button id="editTeachInfo" class="ui primary button">Edit Teacher Information</button>
+			</div>
+			<div id="classWithTeacher" style="margin-top: 24px;">
+				<h3>Choose Class with associated teachers</h3>
+				<select class="ui search dropdown" id="multi-select-class">
+					<option value="">Classes...</option>
+				</select>
+				<select class="ui search selection dropdown" multiple="" id="multi-select-subject">
+					<option value="">Subjects...</option>
+				</select>
+				<button id="addTeacherWithClass" class="ui primary button">Add</button>
+				<button id="clearTeacherWithClass"class="ui button">Clear All</button>
+			</div>
+			<div id="finishOrEditClassWithTeacher" style="margin-top: 14px;">
+			   <button id="finishClassWithTeacher" class="ui primary button">Finish</button>
+			   <button id="editClassWithTeacher" class="ui primary button">Edit Class with associated teachers</button>
+			</div>
+			<div id="preferenceOfTeacher" style="margin-top: 24px;">
+				<h3>Choose Prefered Class Periods</h3>
+				<div class="ui small icon input">
+			
+					<select class="ui search dropdown" id="multi-select-class-period">
+						<option value="">Classes...</option>
+					</select>
+					<select class="ui search dropdown" id="multi-select-subject-period">
+						<option value="">Subjects...</option>
+					</select>
+				
+					<select class="ui search dropdown" id="select-day">
+						<option value="">Day</option>
+						<option value="1">Monday</option>
+						<option value="2">Tuesday</option>
+						<option value="3">Wednesday</option>
+						<option value="4">Thrusday</option>
+						<option value="5">Friday</option>
+						<option value="6">Saturday</option>
+					</select>
+					<select class="ui search dropdown" id="select-period">
+						<option value="">Period</option>
+						<option value="1">Period 1</option>
+						<option value="2">Period 2</option>
+						<option value="3">Period 3</option>
+						<option value="4">Period 4</option>
+						<option value="5">Period 5</option>
+						<option value="6">Period 6</option>
+					</select>
+					<select class="ui search dropdown" id="select-week">
+						<option value="">Weekly Once</option>
+						<option value="1">Yes</option>
+						<option value="2">No</option>
+					</select>
+					<select class="ui search dropdown" id="select-noon">
+						<option value="">Choose noon</option>
+						<option value="1">Forenoon</option>
+						<option value="2">Afternoon</option>
+					</select>
+				</div>
+				<button id="addPreferenceOfTeacher" class="ui primary button" style="margin-top: 16px;">Add</button>
+				<button id="clearPreferenceOfTeacher" class="ui button" style="margin-top: 16px;">Clear All</button>
+			</div>
+			<div id="finishOrEditPreferenceOfTeacher" style="margin-top: 14px;">
+			   <button id="finishPreferenceOfTeacher" class="ui primary button">Finish</button>
+			   <button id="editPreferenceOfTeacher" class="ui primary button">Edit Prefered Class Periods</button>
+			</div>
+			<div id="exportFile" style="margin-top: 24px;">
+				<h3>Time Table Path</h3>
+				<div class="ui small icon input">
+					<input type="text" placeholder="Enter file path of excel sheet" style="width: 235px;">
+				</div>
+			</div>
+			<div id="generateExportDiv" style="margin-top: 14px;">
+			   <button id="generateExportButton" class="ui primary button">Generate</button>
+			</div>
+		</div>
+		<div class="ui active centered large inline loader" style="display: none;margin-top:255px" id="loader"></div>		
+  <p></p>
+</div>
+</body>
+</html>

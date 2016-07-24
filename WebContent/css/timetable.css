@@ -1,0 +1,16 @@
+#pagemain
+{
+    width: 100%;
+    height: auto;
+}
+#main-content
+{
+    width: 960px;
+    height: 650px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 140px;
+}
+.largeP{
+	font-size: 18px;
+}
